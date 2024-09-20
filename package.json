@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.tsx",
+  "homepage": "https://haiku1135.github.io/practice-ssr/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "rm": "rm -rf docs",
+    "mv": "mv build docs",
+    "git": "git add . && git commit -m \"Update build\" && git push origin master",
+    "deploy": "npm run rm && npm run build && npm run mv && npm run git"
   },
   "author": "",
   "license": "ISC",
